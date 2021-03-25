@@ -8,7 +8,26 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-.error{
+.presentation{
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.image {
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10rem;
+    padding: 1rem;
+}
+
+.error {
     background-color: red;
     color: white;
 }
@@ -28,8 +47,14 @@ input[type=number] {
     z-index: 9;
 }
 
+
 ul{
     list-style: none;
+}
+
+.ulPresentation {
+    margin: 0;
+    padding: 0;
 }
 
 .form {
@@ -121,7 +146,6 @@ select {
     margin: 0 auto;
     width: 82%;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 li.text {
@@ -139,38 +163,6 @@ li.text {
     padding: 1rem;
 }
 
-.removeScrollbar{
-    overflow: hidden;
-}
-
-#closeMenuButton {
-    position: absolute;
-    font-size: 1.4rem;
-    display: block;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
-    margin: 0;
-    top: 7px;
-    right: 15px;
-    z-index: 21;
-    color: #136433;
-    background-color: #e6f5ec;
-    border-style: solid;
-    border-bottom-color: #136433;
-    border-radius: 160px;
-}
-
-#phoneMenuIcon {
-    position: fixed;
-    font-size: 3rem;
-    margin: 0;
-    top: 60px;
-    right: 40px;
-    z-index: 21;
-    color: #136433;
-    display: none;
-}
-
 #phoneMenu {
     position: fixed;
     top: 0;
@@ -184,8 +176,6 @@ li.text {
     cursor: pointer;
 }
 
-
-
 #site {
     width: 100%;
     height: 100%;
@@ -198,23 +188,7 @@ a{
 }
 
 
-.buttonSaibaMais {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 10;
-    margin-left: auto;
-    margin-right: auto;
-    height: 70px;
-    width: auto;
-}
-
 .closed {
-    display: none;
-}
-
-#phoneMenuIcon {
     display: none;
 }
 
@@ -223,46 +197,12 @@ a{
 }
 
 @media screen and (max-width: 1045px){
-    #menu{
-        display: none;
-    }
-
-    #phoneMenuIcon{
-        display: block;
-    }
-
-    #phoneMenu {
-        width: 100%;
-    }
-
-    .menu_text {
-        display: block;
-        padding: 0.5rem;
-        padding-left: 2rem;
-        width: 100%;
-        border-style: solid;
-        border-right: none;
-        border-left: none;
-    }
-
     #whatsappLogo {
         width: 9vw;
-    }
-
-    .buttonSaibaMais {
-        height: 60px;
     }
 }
 
 @media screen and (max-width: 845px) {
-    #menu {
-        display: none;
-    }
-
-    #phoneMenuIcon {
-        display: block;
-    }
-
     #whatsappLogo {
         width: 4rem;
     }
@@ -287,10 +227,6 @@ a{
         position: initial;
         padding: 0;
         margin: 0;
-    }
-
-    .buttonSaibaMais {
-        height: 60px;
     }
 
     .footerUl {
