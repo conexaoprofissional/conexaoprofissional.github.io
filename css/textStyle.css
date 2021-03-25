@@ -1,9 +1,9 @@
 .text {
-    color: #483c50;
     font-family: 'Josefin Sans', 'Leelawadee UI', sans-serif;
     font-weight: 500;
     font-size: 1.3rem;
     text-align: justify;
+    padding: 1rem;
 }
 
 .textInput {
@@ -21,13 +21,12 @@
 }
 
 .title {
-    color: #136433;
+    color: red;
     font-family: 'Lobster','Leelawadee UI';
     font-weight: 600;
-    font-size: 70px;
+    font-size: 3rem;
     text-align: center;
-    margin-top: 5rem;
-    margin-left: 3rem;
+    padding-top: 2rem;
 }
 
 .question {
@@ -39,12 +38,6 @@
     text-align: center;
 }
 
-.menu_text {
-    color: #136433;
-    font-family: 'Josefin Sans', 'Leelawadee UI', sans-serif;
-    font-weight: 900;
-    font-size: 1.45rem;
-}
 
 .footerText {
     font-family: 'Josefin Sans', 'Leelawadee UI', sans-serif;
@@ -56,25 +49,4 @@
 
 .center{
     text-align: center;
-}
-
-.answers {
-    font-family: 'Josefin Sans', 'Leelawadee UI', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.price {
-    font-family: 'Josefin Sans', 'Leelawadee UI', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    display: inline;
-    margin-left: 1.2rem;
-}
-
-.cartText {
-    font-family: 'Josefin Sans', 'Leelawadee UI', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #136433;
 }
