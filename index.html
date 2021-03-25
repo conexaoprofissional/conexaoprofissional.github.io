@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Conexão Profissional</title>
+    <meta name="author" content="Everton Alves" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="imagem/png" href="images/2.ico" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="css/textStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/mainStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="site">
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/databaseScript.js"></script>
+    <script src="js/showHideTagScript.js"></script>
+    <script src="js/validateInfoScript.js"></script>
+    <script src="js/indexScript.js"></script>
+
+    <div id="logoContainer">
+        <img src="images/logo.png" id="logo" />
+    </div>
+
+    <div id="talkWithUs">
+        <p class="question">Duvidas?</p>
+        <a href="https://wa.me/558197379344" target="_blank">
+            <img src="images/whatsappLogoDuvidas.png" id="whatsappLogo" />
+        </a>
+    </div>
+
+    <div id="content">
+        <div class="form">
+            <h2 class="title2">Cadastre-se</h2>
+            <ul class="ulForm">
+                <li class="text">
+                    <select id="course" name="course" class="textInput"
+                            onblur="checkCourse()">
+                        <option value="error">
+                            Escolha Seu Curso
+                        </option>
+
+                        <option value="Designer Gráfico">
+                            Designer Gráfico
+                        </option>
+
+                        <option value="Dj Profissional">
+                            Dj Profissional
+                        </option>
+
+                        <option value="Eletricista Residencial">
+                            Eletricista Residencial
+                        </option>
+
+                        <option value="Desenvolvedor de Games">
+                            Desenvolvedor de Games
+                        </option>
+
+                        <option value="Operador de Caixa">
+                            Operador de Caixa
+                        </option>
+
+                        <option value="Youtuber">
+                            Youtuber
+                        </option>
+                    </select>
+                </li>
+
+                <li class="text">
+                    <input type="text" id="name"
+                           value="Nome Completo" class="textInput"
+                           onkeydown="eraseText('name', 'Nome Completo')"
+                           onblur="checkName()" />
+                </li>
+
+                <li class="text">
+                    <input type="tel" id="telefone"
+                           value="Telefone com DDD" class="textInput"
+                           onkeydown="eraseText('telefone', 'Telefone com DDD')"
+                           onblur="checkPhone()" />
+                </li>
+
+                <li class="text">
+                    <input type="email" id="email"
+                           value="E-mail" class="textInput"
+                           onkeydown="eraseText('email', 'E-mail')"
+                           onblur="checkEmail()" />
+
+                </li>
+
+                <li class="text">
+                    <input list="city-list" type="text" id="cidade"
+                           value="Cidade" class="textInput"
+                           onfocus="eraseText('cidade', 'Cidade')"
+                           onblur="checkCity()" />
+                    <datalist id="city-list">
+                        <option value="Vitória de Santo Antão"></option>
+                        <option value="Pombos" />
+                        <option value="Bonança" />
+                        <option value="Moreno" />
+                        <option value="Glória do Goitá" />
+                        <option value="Escada" />
+                        <option value="Cabo" />
+                        <option value="Chã de Alegria" />
+                        <option value="Outras" />
+                    </datalist>
+                </li>
+
+                <li>
+                    <button class="text" onclick="sendInscription()" id="confirmar">
+                        Finalizar Cadastro
+                    </button>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <ul class="ul_contact_logo">
+            <li class="footerLi">
+                <a href="https://wa.me/558197379344" target="_blank">
+                    <img src="images/whatsappLogo.png" class="contactLogo" />
+                </a>
+            </li>
+
+            <li class="footerLi">
+                <a href="https://www.instagram.com/conexao_profissional/" target="_blank">
+                    <img src="images/instagramLogo.png" class="contactLogo" />
+                </a>
+            </li>
+
+            <li class="footerLi">
+                <a href="https://www.facebook.com/conex.profi" target="_blank">
+                    <img src="images/facebookLogo.png" class="contactLogo" />
+                </a>
+            </li>
+        </ul>
+
+        <ul class="footerUl">
+            <li class="footerText">
+                (81) 9737-9344
+            </li>
+
+            <li class="footerText">
+                Praça Duque de Caxias
+            </li>
+
+            <li class="footerText center">
+                Vitória de Santo Antão - PE
+            </li>
+        </ul>
+    </footer>
+
+</body>
+</html>
