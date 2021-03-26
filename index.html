@@ -22,6 +22,10 @@
     <script src="js/validateInfoScript.js"></script>
     <script src="js/indexScript.js"></script>
 
+    <h1 class="closed">
+        Projeto Conexão Profissional
+    </h1>
+
     <div id="logoContainer">
         <img src="images/logo.png" id="logo" />
     </div>
@@ -34,14 +38,97 @@
     </div>
 
     <div class="presentation">
-        <h1 class="title">
-            OPORTUNIDADE
-        </h1>
         <p class="title2">
-            Olha só o que preparamos para você 
+            Olha só o que preparamos para você
             neste momento de confinamento!!
         </p>
-        <hr />
+
+        <div class="form">
+            <h2 class="title2">Cadastre-se</h2>
+            <ul class="ulForm">
+                <li class="text">
+                    <select id="course1" name="course" class="textInput"
+                            onblur="checkCourse('course1')">
+                        <option value="error">
+                            Escolha Seu Curso
+                        </option>
+
+                        <option value="Designer Gráfico">
+                            Designer Gráfico
+                        </option>
+
+                        <option value="Dj Profissional">
+                            Dj Profissional
+                        </option>
+
+                        <option value="Eletricista Residencial">
+                            Eletricista Residencial
+                        </option>
+
+                        <option value="Desenvolvedor de Games">
+                            Desenvolvedor de Games
+                        </option>
+
+                        <option value="Operador de Caixa">
+                            Operador de Caixa
+                        </option>
+
+                        <option value="Youtuber">
+                            Youtuber
+                        </option>
+                    </select>
+                </li>
+
+                <li class="text">
+                    <input type="text" id="name1"
+                           value="Nome Completo" class="textInput"
+                           onkeydown="eraseText('name1', 'Nome Completo')"
+                           onblur="checkName('name1')" />
+                </li>
+
+                <li class="text">
+                    <input type="tel" id="telefone1"
+                           value="Telefone com DDD" class="textInput"
+                           onkeydown="eraseText('telefone1', 'Telefone com DDD')"
+                           onblur="checkPhone('telefone1')" />
+                </li>
+
+                <li class="text">
+                    <input type="email" id="email1"
+                           value="E-mail" class="textInput"
+                           onkeydown="eraseText('email1', 'E-mail')"
+                           onblur="checkEmail('email1')" />
+
+                </li>
+
+                <li class="text">
+                    <input list="city-list1" type="text" id="cidade1"
+                           value="Cidade" class="textInput"
+                           onfocus="eraseText('cidade1', 'Cidade')"
+                           onblur="checkCity('cidade1')" />
+                    <datalist id="city-list1">
+                        <option value="Vitória de Santo Antão"></option>
+                        <option value="Pombos" />
+                        <option value="Bonança" />
+                        <option value="Moreno" />
+                        <option value="Glória do Goitá" />
+                        <option value="Escada" />
+                        <option value="Cabo" />
+                        <option value="Chã de Alegria" />
+                        <option value="Outras" />
+                    </datalist>
+                </li>
+
+                <li>
+                    <button class="text confirmar clickable"
+                            onclick="sendInscription('course1', 'email1',
+                                    'name1', 'telefone1','cidade1')">
+                        Finalizar Cadastro
+                    </button>
+                </li>
+            </ul>
+        </div>
+
 
         <div>
             <h2 class="title2">
@@ -65,7 +152,7 @@
 
             <ul class="ulPresentation">
                 <li class="text">
-                    Disponibilizar treinamentos 
+                    Disponibilizar treinamentos
                     gratuitos em instituições parceiras.
                 </li>
 
@@ -82,10 +169,10 @@
                 </li>
             </ul>
         </div>
-        <hr />
-        <div>
+
+        <div class="background1">
             <div class="imageContainer">
-                <img src="images/formatura.jpg" class="image" />
+                <img src="images/formatura.png" class="image" />
             </div>
 
             <h2 class="title2"> PARA QUEM É O CURSO?</h2>
@@ -96,7 +183,6 @@
             </p>
         </div>
 
-        <hr />
         <div>
             <div class="imageContainer">
                 <img src="images/pc.png" class="image" />
@@ -109,10 +195,9 @@
             </p>
         </div>
 
-        <hr />
-        <div>
+        <div class="background2">
             <div class="imageContainer">
-                <img src="images/certificado.jpg" class="image" />
+                <img src="images/certificado.png" class="image" />
             </div>
 
             <h2 class="title2">CERTIFICADO</h2>
@@ -123,7 +208,6 @@
             </p>
         </div>
 
-        <hr />
         <div>
             <div class="imageContainer">
                 <a href="https://wa.me/558197379344" target="_blank">
@@ -140,13 +224,13 @@
 
     </div>
 
-    <div id="content">
+    <div class="content">
         <div class="form">
             <h2 class="title2">Cadastre-se</h2>
             <ul class="ulForm">
                 <li class="text">
                     <select id="course" name="course" class="textInput"
-                            onblur="checkCourse()">
+                            onblur="checkCourse('course')">
                         <option value="error">
                             Escolha Seu Curso
                         </option>
@@ -181,21 +265,21 @@
                     <input type="text" id="name"
                            value="Nome Completo" class="textInput"
                            onkeydown="eraseText('name', 'Nome Completo')"
-                           onblur="checkName()" />
+                           onblur="checkName('name')" />
                 </li>
 
                 <li class="text">
                     <input type="tel" id="telefone"
                            value="Telefone com DDD" class="textInput"
                            onkeydown="eraseText('telefone', 'Telefone com DDD')"
-                           onblur="checkPhone()" />
+                           onblur="checkPhone('telefone')" />
                 </li>
 
                 <li class="text">
                     <input type="email" id="email"
                            value="E-mail" class="textInput"
                            onkeydown="eraseText('email', 'E-mail')"
-                           onblur="checkEmail()" />
+                           onblur="checkEmail('email')" />
 
                 </li>
 
@@ -203,7 +287,7 @@
                     <input list="city-list" type="text" id="cidade"
                            value="Cidade" class="textInput"
                            onfocus="eraseText('cidade', 'Cidade')"
-                           onblur="checkCity()" />
+                           onblur="checkCity('cidade')" />
                     <datalist id="city-list">
                         <option value="Vitória de Santo Antão"></option>
                         <option value="Pombos" />
@@ -218,7 +302,9 @@
                 </li>
 
                 <li>
-                    <button class="text clickable" onclick="sendInscription()" id="confirmar">
+                    <button class="text confirmar clickable"
+                            onclick="sendInscription('course', 'email',
+                                    'name', 'telefone','cidade')">
                         Finalizar Cadastro
                     </button>
                 </li>
@@ -228,7 +314,7 @@
 
     <h2 class="title">
         NÃO DEIXE ESSA OPORTUNIDADE PASSAR, POIS TODA CRISE É SUPERADA COM
-        QUALIFICAÇÃO!
+        QUALIFICAÇÃO!!!
     </h2>
 
     <footer>
@@ -255,10 +341,6 @@
         <ul class="footerUl">
             <li class="footerText">
                 (81) 9737-9344
-            </li>
-            
-            <li class="footerText center">
-                Vitória de Santo Antão - PE
             </li>
         </ul>
     </footer>
