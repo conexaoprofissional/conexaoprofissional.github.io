@@ -1,7 +1,7 @@
 .text {
     font-family: 'Josefin Sans', 'Leelawadee UI', sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.3rem;
     text-align: justify;
     padding: 1rem;
 }
@@ -16,7 +16,7 @@
 .title2 {
     font-family: 'Lobster','Leelawadee UI';
     font-weight: 600;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -24,7 +24,7 @@
     color: red;
     font-family: 'Lobster','Leelawadee UI';
     font-weight: 600;
-    font-size: 25px;
+    font-size: 2.3rem;    
     text-align: center;
     padding-top: 2rem;
 }
@@ -53,15 +53,15 @@
 
 @media screen and (max-width: 679px) {
     .text {
-        font-size: 1.3rem;
+        font-size: 15px;
     }
 
     .title2 {
-        font-size: 2rem;
+        font-size: 20px;
     }
 
     .title {
-        font-size: 2.3rem;
+        font-size: 25px;
     }
 }
 
