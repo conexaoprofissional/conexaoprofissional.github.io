@@ -1,12 +1,3 @@
-var cursos = {
-    designer: "Designer Gráfico",
-    dj: "Dj Profissional",
-    eletricista: "Eletricista Residencial",
-    games: "Desenvolvedor de Games",
-    caixa: "Operador de Caixa",
-    youtuber: "Youtuber"
-}
-
 function getParentId() {
     let date = new Date;
     let day = date.getDate();
@@ -30,14 +21,15 @@ function sendErrorAlert(Error) {
     window.alert(Error);
 }
 
-function sendInscription() {
-    var course= getCourseValue();
-    var clientId = document.getElementById('email').value;
-    var name = document.getElementById('name').value;
-    var phone = document.getElementById('telefone').value;
-    var city = document.getElementById('cidade').value;
-    var parentId = getParentId() + '/';
-    var childId = createId(name);
+function sendInscription(courseId, emailId, nameId, phoneId, cityId) {
+    var course= getCourseValue(courseId);
+    var clientId = document.getElementById(emailId).value;
+    var name = document.getElementById(nameId).value;
+    var phone = document.getElementById(phoneId).value;
+    var city = document.getElementById(cityId).value;
+
+    var parentId = getParentId() + '/'; //database Parent
+    var childId = createId(name); //database child
 
     if (courseError) {
         sendErrorAlert("Escolha seu curso");
