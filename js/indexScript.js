@@ -15,9 +15,9 @@ function putTagBack(id, tag) {
     document.getElementById(id).value = tag;
 }
 
-function getCourseValue() {
+function getCourseValue(id) {
     if (courseError === false) {
-        let selectedCourse = document.getElementById("course");
+        let selectedCourse = document.getElementById(id);
         return selectedCourse.value;
     }
 }
