@@ -29,134 +29,122 @@ function isNameValid(name) {
     return !result;
 }
 
-function checkName() {
-    let name = document.getElementById("name").value;
+function checkName(id) {
+    let name = document.getElementById(id).value;
 
     if (isNameValid(name)) {
         nameError = false;
-        rightInput('name');
+        rightInput(id);
         return;
     }
 
-    if (isEmpty('name')) {
-        putTagBack('name', 'Nome Completo');
+    if (isEmpty(id)) {
+        putTagBack(id, 'Nome Completo');
     }
 
     nameError = true;
-    wrongInput('name');
+    wrongInput(id);
 }
 
 
-function checkCourse() {
-    let selectedCourse = document.getElementById("course");
+function checkCourse(id) {
+    let selectedCourse = document.getElementById(id);
     if (selectedCourse.value == "error") {
         courseError = true;
-        wrongInput("course");
+        wrongInput(id);
         return;
     }
     courseError = false;
-    rightInput("course");
+    rightInput(id);
 }
 
-function checkPhone() {
-    if (isEmpty("telefone")) {
-        putTagBack('telefone', 'Telefone com DDD');
+function checkPhone(id) {
+    if (isEmpty(id)) {
+        putTagBack(id, 'Telefone com DDD');
         phoneError = true;
-        wrongInput("telefone");
+        wrongInput(id);
         return;
     }
 
-    if (isPhoneValid() === false) {
+    if (isPhoneValid(id) === false) {
         phoneError = true;
-        wrongInput("telefone");
+        wrongInput(id);
         return;
     }
 
     phoneError = false;
-    rightInput("telefone");
+    rightInput(id);
 
-    changePhone();
+    changePhone(id);
 }
 
-function hasPhoneRightDesign(phone) {
-    let hyphen = /[-]/g;
-    let hasHyphen = hyphen.test(oldPhone);
-
-    let openParentheses = /[(]/g;
-
-    let closeParentheses = /[)]/g;
-}
-
-function changePhone() {
-    if (isPhoneValid()) {
-        let oldPhone = document.getElementById("telefone").value;
+function changePhone(id) {
+    if (isPhoneValid(id)) {
+        let oldPhone = document.getElementById(id).value;
 
         let newPhone = "";
 
         if (oldPhone.length == 10) {
             newPhone = "(" + oldPhone[0] + oldPhone[1] + ")";
             newPhone += oldPhone.slice(2, 6) + "-" + oldPhone.slice(6, 10);
-            document.getElementById("telefone").value = newPhone;
+            document.getElementById(id).value = newPhone;
             return;
         }
 
         if (oldPhone.length == 11) {
             newPhone = "(" + oldPhone[0] + oldPhone[1] + ")";
             newPhone += oldPhone.slice(2, 7) + "-" + oldPhone.slice(7, 11);
-            document.getElementById("telefone").value = newPhone;
+            document.getElementById(id).value = newPhone;
             return;
         }
-
-
-        
     }
 }
 
-function checkEmail() {
-    if (isEmpty("email")) {
-        putTagBack('email', 'E-mail');
+function checkEmail(id) {
+    if (isEmpty(id)) {
+        putTagBack(id, 'E-mail');
         emailError = true;
-        wrongInput("email");
+        wrongInput(id);
         return;
     }
 
-    if (isEmailValid() === false) {
+    if (isEmailValid(id) === false) {
         emailError = true;
-        wrongInput("email");
+        wrongInput(id);
         return;
     }
 
     emailError = false;
-    rightInput("email");
+    rightInput(id);
 }
 
-function checkCity() {
-    if (isEmpty("cidade")) {
-        putTagBack('cidade', 'Cidade');
+function checkCity(id) {
+    if (isEmpty(id)) {
+        putTagBack(id, 'Cidade');
         cityError = true;
-        wrongInput("cidade");
+        wrongInput(id);
         return;
     }
 
-    if (isCityValid() === false) { 
+    if (isCityValid(id) === false) { 
         cityError = true;
-        wrongInput("cidade");
+        wrongInput(id);
         return;
     }
 
     cityError = false;
-    rightInput("cidade");
+    rightInput(id);
 }
 
-function isPhoneValid() {
-    let phone = document.getElementById("telefone").value;
+function isPhoneValid(id) {
+    let phone = document.getElementById(id).value;
 
     return (!isTextEqual(phone, "Telefone com DDD")
         && phone.length >= 10 && phone.length < 15 );
 }
 
-function isEmailValid() {
-    let email = document.getElementById("email").value;
+function isEmailValid(id) {
+    let email = document.getElementById(id).value;
 
     let dot = /[.]/g;
     let hasDot = dot.test(email);
@@ -168,8 +156,8 @@ function isEmailValid() {
         && hasDot && hasAtSign);
 }
 
-function isCityValid() {
-    let city = document.getElementById("cidade").value;
+function isCityValid(id) {
+    let city = document.getElementById(id).value;
     return !isTextEqual(city, "Cidade");
 }
 
