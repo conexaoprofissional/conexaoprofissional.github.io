@@ -54,15 +54,15 @@
 
 @media screen and (max-width: 679px) {
     .text {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .title2 {
-        font-size: 23px;
+        font-size: 27px;
     }
 
     .title {
-        font-size: 25px;
+        font-size: 27px;
     }
 }
 
